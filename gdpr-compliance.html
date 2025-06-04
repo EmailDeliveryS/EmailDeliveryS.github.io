@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GDPR Compliance - CountryMax Email Delivery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .logo i {
+            color: var(--accent);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .policy-container {
+            max-width: 1000px;
+            margin: 4rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+        }
+        
+        .policy-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        .policy-header h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+        }
+        
+        .policy-header p {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+        
+        .policy-content {
+            line-height: 1.8;
+        }
+        
+        .bilingual-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .bilingual-section:last-child {
+            border-bottom: none;
+        }
+        
+        .english, .japanese {
+            padding: 10px;
+        }
+        
+        .japanese {
+            border-left: 1px solid #eee;
+            padding-left: 30px;
+            font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+        }
+        
+        .policy-content h2 {
+            color: #2c3e50;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #ecf0f1;
+            grid-column: span 2;
+        }
+        
+        .policy-content h3 {
+            color: #3498db;
+            margin: 1.5rem 0 0.8rem;
+        }
+        
+        .policy-content p {
+            margin-bottom: 1rem;
+            color: #34495e;
+        }
+        
+        .policy-content ul {
+            padding-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .policy-content li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .last-updated {
+            text-align: right;
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ecf0f1;
+            grid-column: span 2;
+        }
+        
+        .back-to-home {
+            display: inline-block;
+            margin-top: 2rem;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+            grid-column: span 2;
+        }
+        
+        .back-to-home i {
+            margin-right: 8px;
+        }
+        
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .policy-container {
+                padding: 1.5rem;
+                margin: 2rem auto;
+            }
+            
+            .policy-header h1 {
+                font-size: 2rem;
+            }
+            
+            .bilingual-section {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .japanese {
+                border-left: none;
+                border-top: 1px solid #eee;
+                padding-left: 10px;
+                padding-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-paper-plane"></i>
+                <span>CountryMax Email Delivery</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="policy-container">
+        <div class="policy-header">
+            <h1>GDPR Compliance Statement</h1>
+            <p>Last Updated: June 4, 2025</p>
+        </div>
+        <div class="policy-content">
+            <h2>1. Introduction</h2>
+            <div class="bilingual-section">
+                <div class="english">
+                    <p>CountryMax Email Delivery is fully committed to complying with the General Data Protection Regulation (GDPR) (EU) 2016/679. This regulation enhances the protection of personal data of individuals within the European Union and affects how we handle such data in our email delivery services.</p>
+                </div>
+                <div class="japanese">
+                    <p>CountryMax Email Deliveryは、EU一般データ保護規則（GDPR）（EU）2016/679の遵守に完全に取り組んでいます。この規則は、欧州連合内の個人の個人データの保護を強化し、当社の電子メール配信サービスにおけるそのようなデータの取り扱い方法に影響を与えます。</p>
+                </div>
+            </div>
+            
+            <h2>2. Data Controller and Processor</h2>
+            <div class="bilingual-section">
+                <div class="english">
+                    <p>In the context of GDPR:</p>
+                    <ul>
+                        <li><strong>CountryMax Email Delivery</strong> acts as a Data Processor for the personal data contained in emails sent through our service.</li>
+                        <li><strong>Our customers</strong> act as Data Controllers for the personal data they send through our platform.</li>
+                    </ul>
+                </div>
+                <div class="japanese">
+                    <p>GDPRの文脈では：</p>
+                    <ul>
+                        <li><strong>CountryMax Email Delivery</strong> は、当社のサービスを通じて送信される電子メールに含まれる個人データのデータ処理者として機能します。</li>
+                        <li><strong>当社の顧客</strong> は、当社のプラットフォームを通じて送信する個人データのデータ管理者として機能します。</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h2>3. Lawful Basis for Processing</h2>
+            <div class="bilingual-section">
+                <div class="english">
+                    <p>We ensure that all processing activities have a valid lawful basis under GDPR:</p>
+                    <ul>
+                        <li><strong>Consent:</strong> Where required, we ensure explicit consent is obtained and documented.</li>
+                        <li><strong>Contractual Necessity:</strong> Processing necessary for the performance of a contract.</li>
+                        <li><strong>Legitimate Interests:</strong> Processing based on legitimate interests, balanced against individual rights.</li>
+                    </ul>
+                </div>
+                <div class="japanese">
+                    <p>当社は、すべての処理活動がGDPRに基づく有効な法的根拠を持つことを保証します：</p>
+                    <ul>
+                        <li><strong>同意:</strong> 必要な場合、明示的な同意が取得され文書化されていることを保証します。</li>
+                        <li><strong>契約上の必要性:</strong> 契約の履行に必要な処理。</li>
+                        <li><strong>正当な利益:</strong> 個人の権利と比較衡量された正当な利益に基づく処理。</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h2>4. Data Subject Rights</h2>
+            <div class="bilingual-section">
+                <div class="english">
+                    <p>We facilitate our customers in fulfilling data subject rights requests:</p>
+                    <ul>
+                        <li><strong>Right to Access:</strong> Individuals can request access to their personal data.</li>
+                        <li><strong>Right to Rectification:</strong> Individuals can request correction of inaccurate data.</li>
+                        <li><strong>Right to Erasure:</strong> Individuals can request deletion of their personal data ("right to be forgotten").</li>
+                        <li><strong>Right to Restriction:</strong> Individuals can request restriction of processing.</li>
+                        <li><strong>Right to Data Portability:</strong> Individuals can request their data in a structured format.</li>
+                        <li><strong>Right to Object:</strong> Individuals can object to certain types of processing.</li>
+                    </ul>
+                </div>
+                <div class="japanese">
+                    <p>当社は、データ主体の権利要求を満たすための顧客の支援を行います：</p>
+                    <ul>
+                        <li><strong>アクセス権:</strong> 個人は自身の個人データへのアクセスを要求できます。</li>
+                        <li><strong>訂正権:</strong> 個人は不正確なデータの訂正を要求できます。</li>
+                        <li><strong>消去権（忘れられる権利）:</strong> 個人は自身の個人データの消去を要求できます。</li>
+                        <li><strong>処理制限権:</strong> 個人は処理の制限を要求できます。</li>
+                        <li><strong>データポータビリティ権:</strong> 個人は構造化された形式でのデータの提供を要求できます。</li>
+                        <li><strong>異議権:</strong> 個人は特定の種類の処理に異議を唱えることができます。</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h2>5. Data Processing Agreement (DPA)</h2>
+            <div class="bilingual-section">
+                <div class="english">
+                    <p>We offer a GDPR-compliant Data Processing Agreement to all customers handling EU resident data. Our DPA includes:</p>
+                    <ul>
+                        <li>Clear roles and responsibilities of controller and processor</li>
+                        <li>Security measures and confidentiality obligations</li>
+                        <li>Procedures for data breach notification</li>
+                        <li>Data transfer safeguards</li>
+                        <li>Sub-processing requirements</li>
+                    </ul>
+                    <p>To request our DPA, please contact us at privacy@countrymaxemail.com.</p>
+                </div>
+                <div class="japanese">
+                    <p>EU居住者のデータを扱うすべての顧客に、GDPRに準拠したデータ処理契約（DPA）を提供しています。当社のDPAには以下が含まれます：</p>
+                    <ul>
+                        <li>管理者と処理者の明確な役割と責任</li>
+                        <li>セキュリティ対策と守秘義務</li>
+                        <li>データ侵害通知の手順</li>
+                        <li>データ転送の保護措置</li>
+                        <li>下請け処理の要件</li>
+                    </ul>
+                    <p>DPAをリクエストするには、privacy@countrymaxemail.comまでお問い合わせください。</p>
+                </div>
+            </div>
+            
+            <h2>6. Data Transfers</h2>
+            <div class="bilingual-section">
+                <div class="english">
+                    <p>When transferring personal data outside the EEA, we ensure adequate safeguards are in place:</p>
+                    <ul>
+                        <li>Standard Contractual Clauses (SCCs)</li>
+                        <li>Adequacy decisions for recipient countries</li>
+                        <li>Binding Corporate Rules (BCRs) where applicable</li>
+                    </ul>
+                </div>
+                <div class="japanese">
+                    <p>個人データをEEA外に転送する場合、適切な保護措置が講じられていることを保証します：</p>
+                    <ul>
+                        <li>標準契約条項（SCCs）</li>
+                        <li>受領国に対する妥当性決定</li>
+                        <li>適用可能な場合は拘束的企業準則（BCRs）</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h2>7. Data Protection Officer</h2>
+            <div class="bilingual-section">
+                <div class="english">
+                    <p>We have appointed a Data Protection Officer (DPO) to oversee GDPR compliance:</p>
+                    <p><strong>Data Protection Officer:</strong><br>
+                    Email: dpo@countrymaxemail.com<br>
+                    Postal: Attn: Data Protection Officer, 123 Compliance Street, New York, NY 10001, USA</p>
+                </div>
+                <div class="japanese">
+                    <p>GDPR遵守を監督するためにデータ保護責任者（DPO）を任命しています：</p>
+                    <p><strong>データ保護責任者:</strong><br>
+                    メール: dpo@countrymaxemail.com<br>
+                    郵便: データ保護責任者宛て, 123 Compliance Street, New York, NY 10001, USA</p>
+                </div>
+            </div>
+            
+            <h2>8. Data Breach Notification</h2>
+            <div class="bilingual-section">
+                <div class="english">
+                    <p>In the event of a personal data breach, we will:</p>
+                    <ul>
+                        <li>Notify affected customers without undue delay</li>
+                        <li>Provide details of the breach and affected data</li>
+                        <li>Assist in meeting GDPR notification requirements</li>
+                    </ul>
+                </div>
+                <div class="japanese">
+                    <p>個人データ侵害が発生した場合、当社は以下の対応を行います：</p>
+                    <ul>
+                        <li>影響を受ける顧客に不当な遅延なく通知する</li>
+                        <li>侵害の詳細と影響を受けたデータを提供する</li>
+                        <li>GDPR通知要件の達成を支援する</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h2>9. Data Retention</h2>
+            <div class="bilingual-section">
+                <div class="english">
+                    <p>We retain personal data only as long as necessary for the purposes outlined in our Privacy Policy, in accordance with GDPR's storage limitation principle.</p>
+                </div>
+                <div class="japanese">
+                    <p>当社は、GDPRの保存制限原則に従い、プライバシーポリシーに記載された目的のために必要な期間のみ個人データを保持します。</p>
+                </div>
+            </div>
+            
+            <h2>10. Ongoing Compliance</h2>
+            <div class="bilingual-section">
+                <div class="english">
+                    <p>We maintain GDPR compliance through:</p>
+                    <ul>
+                        <li>Regular staff training on data protection</li>
+                        <li>Annual GDPR audits and assessments</li>
+                        <li>Privacy by Design and Default implementation</li>
+                        <li>Maintaining Records of Processing Activities (ROPA)</li>
+                    </ul>
+                </div>
+                <div class="japanese">
+                    <p>当社は以下の方法でGDPR遵守を維持しています：</p>
+                    <ul>
+                        <li>データ保護に関する定期的なスタッフトレーニング</li>
+                        <li>年次GDPR監査と評価</li>
+                        <li>プライバシーバイデザインおよびデフォルトの実装</li>
+                        <li>処理活動記録（ROPA）の維持</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="last-updated">
+                <p>Effective Date: June 4, 2025</p>
+            </div>
+            
+            <a href="index.html" class="back-to-home"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>CountryMax Email</h3>
+                    <p>Professional email delivery service powered by Amazon SES infrastructure.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="gdpr-compliance.html">GDPR Compliance</a></li>
+                        <li><a href="anti-spam.html">Anti-Spam Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> koltwnvtya@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (516) 786-6647</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Corvallis, OR, USA</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 CountryMax Email Delivery Service. All rights reserved. A professional email solution powered by Amazon SES.</p>
+                <p>GitHub Pages URL: https://countrymaxemaildelivery1.github.io</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

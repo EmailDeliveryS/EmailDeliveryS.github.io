@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - CountryMax Email Delivery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .logo i {
+            color: var(--accent);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Policy Container */
+        .policy-container {
+            max-width: 1000px;
+            margin: 4rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+        }
+        
+        .policy-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        .policy-header h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+        }
+        
+        .policy-header p {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+        
+        .policy-content {
+            line-height: 1.8;
+        }
+        
+        .bilingual-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .bilingual-section:last-child {
+            border-bottom: none;
+        }
+        
+        .english, .japanese {
+            padding: 10px;
+        }
+        
+        .japanese {
+            border-left: 1px solid #eee;
+            padding-left: 30px;
+            font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+        }
+        
+        .policy-content h2 {
+            color: #2c3e50;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #ecf0f1;
+            grid-column: span 2;
+        }
+        
+        .policy-content h3 {
+            color: #3498db;
+            margin: 1.5rem 0 0.8rem;
+        }
+        
+        .policy-content p {
+            margin-bottom: 1rem;
+            color: #34495e;
+        }
+        
+        .policy-content ul {
+            padding-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .policy-content li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .last-updated {
+            text-align: right;
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ecf0f1;
+            grid-column: span 2;
+        }
+        
+        .back-to-home {
+            display: inline-block;
+            margin-top: 2rem;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+            grid-column: span 2;
+        }
+        
+        .back-to-home i {
+            margin-right: 8px;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .policy-container {
+                padding: 1.5rem;
+                margin: 2rem auto;
+            }
+            
+            .policy-header h1 {
+                font-size: 2rem;
+            }
+            
+            .bilingual-section {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .japanese {
+                border-left: none;
+                border-top: 1px solid #eee;
+                padding-left: 10px;
+                padding-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-paper-plane"></i>
+                <span>CountryMax Email Delivery</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="anti-spam.html">Anti-Spam Policy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Privacy Policy -->
+    <div class="policy-container">
+        <div class="policy-header">
+            <h1>Privacy Policy</h1>
+            <p>Last Updated: June 4, 2025</p>
+        </div>
+        <div class="policy-content">
+            <h2>1. Introduction</h2>
+            <div class="bilingual-section">
+                <div class="english">
+                    <p>CountryMax Email Delivery ("we", "us", or "our") operates the email delivery service accessible at https://countrymaxemaildelivery1.github.io. This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service, in compliance with global privacy regulations including Japan's Act on the Protection of Personal Information (APPI).</p>
+                </div>
+                <div class="japanese">
+                    <p>CountryMax Email Delivery（「当社」）は、https://countrymaxemaildelivery1.github.io でアクセス可能な電子メール配信サービスを運営しています。本ページでは、日本の個人情報保護法（APPI）を含む世界のプライバシー規制に準拠し、当社のサービスをご利用になる際の個人データの収集、使用、開示に関するポリシーをお知らせします。</p>
+                </div>
+            </div>
+            
+            <h2>2. Information We Collect</h2>
+            <div class="bilingual-section">
+                <div class="english">
+                    <p>We collect several different types of information for various purposes to provide and improve our Service to you.</p>
+                    
+                    <h3>Personal Data</h3>
+                    <p>While using our Service, we may ask you to provide us with certain personally identifiable information that can be used to contact or identify you ("Personal Data"). Personally identifiable information may include, but is not limited to:</p>
+                    <ul>
+                        <li>Email address</li>
+                        <li>First name and last name</li>
+                        <li>Phone number</li>
+                        <li>Business name and address</li>
+                        <li>Payment information</li>
+                    </ul>
+                    
+                    <h3>Usage Data</h3>
+                    <p>We may also collect information on how the Service is accessed and used ("Usage Data"). This Usage Data may include information such as your computer's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p>
+                </div>
+                <div class="japanese">
+                    <p>当社は、お客様にサービスを提供し改善するための様々な目的で、いくつかの異なる種類の情報を収集します。</p>
+                    
+                    <h3>個人データ</h3>
+                    <p>当社のサービスをご利用中に、お客様の連絡先や身元を特定するために使用できる特定の個人識別情報（「個人データ」）の提供をお願いする場合があります。個人識別情報には以下が含まれますが、これらに限定されません：</p>
+                    <ul>
+                        <li>メールアドレス</li>
+                        <li>姓と名</li>
+                        <li>電話番号</li>
+                        <li>事業者名と住所</li>
+                        <li>支払い情報</li>
+                    </ul>
+                    
+                    <h3>使用データ</h3>
+                    <p>当社はまた、サービスへのアクセス方法や使用方法に関する情報（「使用データ」）を収集する場合があります。この使用データには、コンピューターのインターネットプロトコルアドレス（IPアドレスなど）、ブラウザの種類、ブラウザのバージョン、訪問した当社サービスのページ、訪問の日時、それらのページで費やした時間、一意のデバイス識別子、その他の診断データなどの情報が含まれる場合があります。</p>
+                </div>
+            </div>
+            
+            <h2>3. Use of Data</h2>
+            <div class="bilingual-section">
+                <div class="english">
+                    <p>CountryMax Email Delivery uses the collected data for various purposes:</p>
+                    <ul>
+                        <li>To provide and maintain our Service</li>
+                        <li>To notify you about changes to our Service</li>
+                        <li>To allow you to participate in interactive features of our Service when you choose to do so</li>
+                        <li>To provide customer support</li>
+                        <li>To monitor the usage of our Service</li>
+                        <li>To detect, prevent and address technical issues</li>
+                    </ul>
+                </div>
+                <div class="japanese">
+                    <p>CountryMax Email Deliveryは収集したデータを様々な目的で使用します：</p>
+                    <ul>
+                        <li>サービスの提供と維持</li>
+                        <li>サービスの変更について通知するため</li>
+                        <li>お客様が選択した場合にサービスのインタラクティブ機能への参加を可能にするため</li>
+                        <li>カスタマーサポートの提供</li>
+                        <li>サービスの使用状況の監視</li>
+                        <li>技術的問題の検出、防止、対処</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h2>4. Data Sharing with Amazon SES</h2>
+            <div class="bilingual-section">
+                <div class="english">
+                    <p>As part of our service, we utilize Amazon Simple Email Service (SES) for email delivery. When you send emails through our platform, the following data is shared with Amazon SES:</p>
+                    <ul>
+                        <li>Email content (subject line, body, attachments)</li>
+                        <li>Recipient email addresses</li>
+                        <li>Sender email address</li>
+                        <li>Metadata required for email transmission</li>
+                    </ul>
+                    <p>Amazon SES processes this data according to their privacy policy and security standards. We do not share your personal account information with Amazon SES beyond what is necessary for email delivery.</p>
+                </div>
+                <div class="japanese">
+                    <p>当社のサービスの一部として、電子メール配信にAmazon Simple Email Service（SES）を利用しています。当社のプラットフォームを通じて電子メールを送信する場合、以下のデータがAmazon SESと共有されます：</p>
+                    <ul>
+                        <li>電子メールの内容（件名、本文、添付ファイル）</li>
+                        <li>受信者の電子メールアドレス</li>
+                        <li>送信者の電子メールアドレス</li>
+                        <li>電子メール送信に必要なメタデータ</li>
+                    </ul>
+                    <p>Amazon SESは、そのプライバシーポリシーとセキュリティ基準に従ってこのデータを処理します。当社は、電子メール配信に必要な範囲を超えて、お客様の個人アカウント情報をAmazon SESと共有することはありません。</p>
+                </div>
+            </div>
+            
+            <h2>5. Data Retention</h2>
+            <div class="bilingual-section">
+                <div class="english">
+                    <p>We will retain your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.</p>
+                </div>
+                <div class="japanese">
+                    <p>当社は、本プライバシーポリシーに記載された目的のために必要な期間のみ、お客様の個人データを保持します。当社は、法的義務を遵守するために必要な範囲で（例えば、適用される法律を遵守するためにデータを保持する必要がある場合）、紛争を解決し、法的合意やポリシーを執行するために、お客様の個人データを保持し使用します。</p>
+                </div>
+            </div>
+            
+            <h2>6. Data Security</h2>
+            <div class="bilingual-section">
+                <div class="english">
+                    <p>The security of your data is important to us but remember that no method of transmission over the Internet or method of electronic storage is 100% secure. While we strive to use commercially acceptable means to protect your Personal Data, we cannot guarantee its absolute security. We implement the following security measures:</p>
+                    <ul>
+                        <li>Encryption of data in transit using TLS/SSL</li>
+                        <li>Secure storage of sensitive information</li>
+                        <li>Regular security audits</li>
+                        <li>Access controls and authentication mechanisms</li>
+                    </ul>
+                </div>
+                <div class="japanese">
+                    <p>お客様のデータの安全性は当社にとって重要ですが、インターネット経由の送信方法や電子保存方法が100%安全ではないことにご留意ください。当社は商業的に受け入れられる手段を使用してお客様の個人データを保護するよう努めていますが、その絶対的な安全性を保証することはできません。当社は以下のセキュリティ対策を実施しています：</p>
+                    <ul>
+                        <li>TLS/SSLを使用した転送中のデータの暗号化</li>
+                        <li>機密情報の安全な保管</li>
+                        <li>定期的なセキュリティ監査</li>
+                        <li>アクセス制御と認証メカニズム</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h2>7. Your Data Protection Rights</h2>
+            <div class="bilingual-section">
+                <div class="english">
+                    <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+                    <ul>
+                        <li><strong>The right to access</strong> - You have the right to request copies of your personal data.</li>
+                        <li><strong>The right to rectification</strong> - You have the right to request that we correct any information you believe is inaccurate.</li>
+                        <li><strong>The right to erasure</strong> - You have the right to request that we erase your personal data, under certain conditions.</li>
+                        <li><strong>The right to restrict processing</strong> - You have the right to request that we restrict the processing of your personal data, under certain conditions.</li>
+                        <li><strong>The right to data portability</strong> - You have the right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions.</li>
+                    </ul>
+                </div>
+                <div class="japanese">
+                    <p>お客様の所在地によっては、個人データに関して以下の権利がある場合があります：</p>
+                    <ul>
+                        <li><strong>アクセス権</strong> - お客様は個人データのコピーを要求する権利があります。</li>
+                        <li><strong>訂正権</strong> - お客様が不正確であると考える情報を当社が訂正するよう要求する権利があります。</li>
+                        <li><strong>消去権</strong> - 一定の条件下で、お客様の個人データを消去するよう要求する権利があります。</li>
+                        <li><strong>処理制限権</strong> - 一定の条件下で、お客様の個人データの処理を制限するよう要求する権利があります。</li>
+                        <li><strong>データポータビリティ権</strong> - 一定の条件下で、当社が収集したデータを別の組織または直接お客様に転送するよう要求する権利があります。</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h2>8. Changes to This Privacy Policy</h2>
+            <div class="bilingual-section">
+                <div class="english">
+                    <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
+                    <p>We will let you know via email and/or a prominent notice on our Service, prior to the change becoming effective and update the "effective date" at the top of this Privacy Policy.</p>
+                </div>
+                <div class="japanese">
+                    <p>当社はプライバシーポリシーを随時更新する場合があります。変更がある場合は、このページに新しいプライバシーポリシーを掲載してお知らせします。</p>
+                    <p>変更が有効になる前に、メールおよび/またはサービス上の目立つ通知でお知らせし、本プライバシーポリシーの上部にある「有効日」を更新します。</p>
+                </div>
+            </div>
+            
+            <div class="last-updated">
+                <p>Effective Date: June 4, 2025</p>
+            </div>
+            
+            <a href="index.html" class="back-to-home"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>CountryMax Email</h3>
+                    <p>Professional email delivery service powered by Amazon SES infrastructure.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="anti-spam.html">Anti-Spam Policy</a></li>
+                        <li><a href="#">Acceptable Use Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> koltwnvtya@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (516) 786-6647</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Corvallis,OR, USA</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 CountryMax Email Delivery Service. All rights reserved. A professional email solution powered by Amazon SES.</p>
+                <p>GitHub Pages URL: https://countrymaxemaildelivery1.github.io</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

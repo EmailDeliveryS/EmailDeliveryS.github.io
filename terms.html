@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service - CountryMax Email Delivery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .logo i {
+            color: var(--accent);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+        
+        nav a:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Policy Container */
+        .policy-container {
+            max-width: 1000px;
+            margin: 4rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+        }
+        
+        .policy-header {
+            text-align: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #3498db;
+        }
+        
+        .policy-header h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+        }
+        
+        .policy-header p {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+        
+        .policy-content {
+            line-height: 1.8;
+        }
+        
+        .bilingual-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .bilingual-section:last-child {
+            border-bottom: none;
+        }
+        
+        .english, .japanese {
+            padding: 10px;
+        }
+        
+        .japanese {
+            border-left: 1px solid #eee;
+            padding-left: 30px;
+            font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+        }
+        
+        .policy-content h2 {
+            color: #2c3e50;
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #ecf0f1;
+            grid-column: span 2;
+        }
+        
+        .policy-content h3 {
+            color: #3498db;
+            margin: 1.5rem 0 0.8rem;
+        }
+        
+        .policy-content p {
+            margin-bottom: 1rem;
+            color: #34495e;
+        }
+        
+        .policy-content ul {
+            padding-left: 2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .policy-content li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .last-updated {
+            text-align: right;
+            font-style: italic;
+            color: #7f8c8d;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ecf0f1;
+            grid-column: span 2;
+        }
+        
+        .back-to-home {
+            display: inline-block;
+            margin-top: 2rem;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 600;
+            grid-column: span 2;
+        }
+        
+        .back-to-home i {
+            margin-right: 8px;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .footer-column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary);
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--secondary);
+            padding-left: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .policy-container {
+                padding: 1.5rem;
+                margin: 2rem auto;
+            }
+            
+            .policy-header h1 {
+                font-size: 2rem;
+            }
+            
+            .bilingual-section {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .japanese {
+                border-left: none;
+                border-top: 1px solid #eee;
+                padding-left: 10px;
+                padding-top: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-paper-plane"></i>
+                <span>CountryMax Email Delivery</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="anti-spam.html">Anti-Spam Policy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Terms of Service -->
+    <div class="policy-container">
+        <div class="policy-header">
+            <h1>Terms of Service</h1>
+            <p>Last Updated: June 4, 2025</p>
+        </div>
+        <div class="policy-content">
+            <h2>1. Acceptance of Terms</h2>
+            <div class="bilingual-section">
+                <div class="english">
+                    <p>By accessing or using CountryMax Email Delivery ("Service"), you agree to be bound by these Terms of Service ("Terms"). If you disagree with any part of the terms, you may not access the Service.</p>
+                </div>
+                <div class="japanese">
+                    <p>CountryMax Email Delivery（「サービス」）にアクセスまたは使用することにより、お客様は本利用規約（「規約」）に拘束されることに同意するものとします。規約のいずれかの部分に同意しない場合、サービスにアクセスすることはできません。</p>
+                </div>
+            </div>
+            
+            <h2>2. Service Description</h2>
+            <div class="bilingual-section">
+                <div class="english">
+                    <p>CountryMax Email Delivery provides email delivery services using Amazon Simple Email Service (SES). We act as an intermediary between you and Amazon SES to facilitate email sending.</p>
+                </div>
+                <div class="japanese">
+                    <p>CountryMax Email Deliveryは、Amazon Simple Email Service（SES）を使用した電子メール配信サービスを提供します。当社は、電子メール送信を容易にするため、お客様とAmazon SESの仲介役として機能します。</p>
+                </div>
+            </div>
+            
+            <h2>3. Account Registration</h2>
+            <div class="bilingual-section">
+                <div class="english">
+                    <p>To use our Service, you must register for an account and provide accurate information. You are responsible for maintaining the security of your account credentials.</p>
+                </div>
+                <div class="japanese">
+                    <p>当社のサービスを使用するには、アカウントを登録し、正確な情報を提供する必要があります。お客様はアカウントの認証情報のセキュリティを維持する責任があります。</p>
+                </div>
+            </div>
+            
+            <h2>4. Acceptable Use</h2>
+            <div class="bilingual-section">
+                <div class="english">
+                    <p>You agree not to use the Service for any unlawful purpose or in violation of these Terms. Prohibited activities include:</p>
+                    <ul>
+                        <li>Sending unsolicited commercial email (spam)</li>
+                        <li>Sending emails with deceptive subject lines or content</li>
+                        <li>Harvesting email addresses without consent</li>
+                        <li>Sending emails containing malware or viruses</li>
+                        <li>Violating CAN-SPAM Act, GDPR, Japan's Act on Regulation of Transmission of Specified Electronic Mail, or other applicable laws</li>
+                    </ul>
+                </div>
+                <div class="japanese">
+                    <p>お客様は、違法な目的で、または本規約に違反してサービスを使用しないことに同意します。禁止されている活動には以下が含まれます：</p>
+                    <ul>
+                        <li>未承諾の商業用電子メール（スパム）の送信</li>
+                        <li>欺瞞的な件名や内容の電子メールの送信</li>
+                        <li>同意なしの電子メールアドレスの収集</li>
+                        <li>マルウェアやウイルスを含む電子メールの送信</li>
+                        <li>CAN-SPAM法、GDPR、日本の特定電子メールの送信の適正化等に関する法律、またはその他の適用される法律の違反</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h2>5. Email Content Requirements</h2>
+            <div class="bilingual-section">
+                <div class="english">
+                    <p>All emails sent through our Service must:</p>
+                    <ul>
+                        <li>Contain a valid physical mailing address</li>
+                        <li>Include a clear and conspicuous unsubscribe mechanism</li>
+                        <li>Accurately identify the sender</li>
+                        <li>Not contain false or misleading information</li>
+                    </ul>
+                </div>
+                <div class="japanese">
+                    <p>当社のサービスを通じて送信されるすべての電子メールは以下を満たす必要があります：</p>
+                    <ul>
+                        <li>有効な物理的な郵送先住所を含むこと</li>
+                        <li>明確で目立つ配信停止メカニズムを含むこと</li>
+                        <li>送信者を正確に識別すること</li>
+                        <li>虚偽または誤解を招く情報を含まないこと</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h2>6. Compliance with Laws</h2>
+            <div class="bilingual-section">
+                <div class="english">
+                    <p>You agree to comply with all applicable laws and regulations, including but not limited to:</p>
+                    <ul>
+                        <li>The CAN-SPAM Act (Controlling the Assault of Non-Solicited Pornography And Marketing Act)</li>
+                        <li>General Data Protection Regulation (GDPR)</li>
+                        <li>Canada's Anti-Spam Legislation (CASL)</li>
+                        <li>California Consumer Privacy Act (CCPA)</li>
+                        <li>Japan's Act on the Protection of Personal Information (APPI)</li>
+                    </ul>
+                </div>
+                <div class="japanese">
+                    <p>お客様は、以下を含むがこれらに限定されない、すべての適用される法律および規制を遵守することに同意します：</p>
+                    <ul>
+                        <li>CAN-SPAM法（未承諾ポルノ・マーケティング防止法）</li>
+                        <li>EU一般データ保護規則（GDPR）</li>
+                        <li>カナダの反スパム法（CASL）</li>
+                        <li>カリフォルニア州消費者プライバシー法（CCPA）</li>
+                        <li>日本の個人情報保護法（APPI）</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h2>7. Account Suspension and Termination</h2>
+            <div class="bilingual-section">
+                <div class="english">
+                    <p>We may suspend or terminate your account at any time if we determine that:</p>
+                    <ul>
+                        <li>You have violated these Terms or applicable laws</li>
+                        <li>Your complaint rate exceeds 0.1%</li>
+                        <li>Your bounce rate exceeds 5%</li>
+                        <li>You engage in activities that threaten the deliverability of our service</li>
+                    </ul>
+                </div>
+                <div class="japanese">
+                    <p>以下の場合、当社はいつでもお客様のアカウントを停止または終了する場合があります：</p>
+                    <ul>
+                        <li>本規約または適用される法律に違反した場合</li>
+                        <li>苦情率が0.1%を超えた場合</li>
+                        <li>バウンス率が5%を超えた場合</li>
+                        <li>サービスの配信可能性を脅かす活動に従事した場合</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h2>8. Intellectual Property</h2>
+            <div class="bilingual-section">
+                <div class="english">
+                    <p>You retain all rights to your content. By using our Service, you grant us a limited license to transmit your content through Amazon SES.</p>
+                </div>
+                <div class="japanese">
+                    <p>お客様は自身のコンテンツに対するすべての権利を保持します。当社のサービスを使用することにより、お客様はAmazon SESを通じてコンテンツを送信するための限定ライセンスを当社に付与します。</p>
+                </div>
+            </div>
+            
+            <h2>9. Limitation of Liability</h2>
+            <div class="bilingual-section">
+                <div class="english">
+                    <p>CountryMax Email Delivery shall not be liable for any indirect, incidental, special, consequential or punitive damages resulting from your use of the Service.</p>
+                </div>
+                <div class="japanese">
+                    <p>CountryMax Email Deliveryは、お客様によるサービスの使用に起因する間接的、偶発的、特別、結果的または懲罰的損害について一切責任を負いません。</p>
+                </div>
+            </div>
+            
+            <h2>10. Amendments</h2>
+            <div class="bilingual-section">
+                <div class="english">
+                    <p>We reserve the right to modify these Terms at any time. Continued use of the Service after changes constitutes acceptance of the modified Terms.</p>
+                </div>
+                <div class="japanese">
+                    <p>当社はいつでも本規約を変更する権利を留保します。変更後もサービスを継続して使用することは、変更された規約の受諾を構成します。</p>
+                </div>
+            </div>
+            
+            <div class="last-updated">
+                <p>Effective Date: June 4, 2025</p>
+            </div>
+            
+            <a href="index.html" class="back-to-home"><i class="fas fa-arrow-left"></i> Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>CountryMax Email</h3>
+                    <p>Professional email delivery service powered by Amazon SES infrastructure.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="anti-spam.html">Anti-Spam Policy</a></li>
+                        <li><a href="#">Acceptable Use Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> koltwnvtya@gmail.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (516) 786-6647</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Corvallis, OR, NY, USA</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 CountryMax Email Delivery Service. All rights reserved. A professional email solution powered by Amazon SES.</p>
+                <p>GitHub Pages URL: https://countrymaxemaildelivery1.github.io</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
