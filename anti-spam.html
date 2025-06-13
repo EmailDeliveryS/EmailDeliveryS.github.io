@@ -1,545 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anti-Spam Policy - CountryMax Email Delivery</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --accent: #e74c3c;
-            --light: #ecf0f1;
-            --dark: #2c3e50;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        
-        /* Header Styles */
-        header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 1rem 0;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.8rem;
-            font-weight: 700;
-        }
-        
-        .logo i {
-            color: var(--accent);
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 1.5rem;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            padding: 8px 12px;
-            border-radius: 4px;
-        }
-        
-        nav a:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-        
-        /* Policy Container */
-        .policy-container {
-            max-width: 1000px;
-            margin: 4rem auto;
-            padding: 2rem;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
-        }
-        
-        .policy-header {
-            text-align: center;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid #3498db;
-        }
-        
-        .policy-header h1 {
-            color: #2c3e50;
-            font-size: 2.5rem;
-        }
-        
-        .policy-header p {
-            color: #7f8c8d;
-            font-size: 1.1rem;
-        }
-        
-        .policy-content {
-            line-height: 1.8;
-        }
-        
-        .bilingual-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 20px;
-            margin-bottom: 20px;
-        }
-        
-        .bilingual-section:last-child {
-            border-bottom: none;
-        }
-        
-        .english, .japanese {
-            padding: 10px;
-        }
-        
-        .japanese {
-            border-left: 1px solid #eee;
-            padding-left: 30px;
-            font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
-        }
-        
-        .policy-content h2 {
-            color: #2c3e50;
-            margin: 2rem 0 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid #ecf0f1;
-            grid-column: span 2;
-        }
-        
-        .policy-content h3 {
-            color: #3498db;
-            margin: 1.5rem 0 0.8rem;
-        }
-        
-        .policy-content p {
-            margin-bottom: 1rem;
-            color: #34495e;
-        }
-        
-        .policy-content ul {
-            padding-left: 2rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .policy-content li {
-            margin-bottom: 0.8rem;
-        }
-        
-        .last-updated {
-            text-align: right;
-            font-style: italic;
-            color: #7f8c8d;
-            margin-top: 2rem;
-            padding-top: 1rem;
-            border-top: 1px solid #ecf0f1;
-            grid-column: span 2;
-        }
-        
-        .back-to-home {
-            display: inline-block;
-            margin-top: 2rem;
-            color: #3498db;
-            text-decoration: none;
-            font-weight: 600;
-            grid-column: span 2;
-        }
-        
-        .back-to-home i {
-            margin-right: 8px;
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--dark);
-            color: white;
-            padding: 4rem 0 2rem;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-        
-        .footer-column h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background: var(--secondary);
-        }
-        
-        .footer-column ul {
-            list-style: none;
-        }
-        
-        .footer-column ul li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-column ul li a {
-            color: #ddd;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .footer-column ul li a:hover {
-            color: var(--secondary);
-            padding-left: 5px;
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.9rem;
-            color: #aaa;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            .policy-container {
-                padding: 1.5rem;
-                margin: 2rem auto;
-            }
-            
-            .policy-header h1 {
-                font-size: 2rem;
-            }
-            
-            .bilingual-section {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-            
-            .japanese {
-                border-left: none;
-                border-top: 1px solid #eee;
-                padding-left: 10px;
-                padding-top: 20px;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C-Tiger - Anti-Spam Policy (迷惑メール対策ポリシー)</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <i class="fas fa-paper-plane"></i>
-                <span>CountryMax Email Delivery</span>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="terms.html">Terms of Service</a></li>
-                    <li><a href="privacy.html">Privacy Policy</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <!-- Anti-Spam Policy -->
-    <div class="policy-container">
-        <div class="policy-header">
-            <h1>Anti-Spam Policy</h1>
-            <p>Last Updated: June 4, 2025</p>
-        </div>
-        <div class="policy-content">
-            <h2>1. Zero Tolerance for Spam</h2>
-            <div class="bilingual-section">
-                <div class="english">
-                    <p>CountryMax Email Delivery maintains a strict zero-tolerance policy against spam. We comply fully with the CAN-SPAM Act of 2003, Canada's Anti-Spam Legislation (CASL), the General Data Protection Regulation (GDPR), Japan's Act on Regulation of Transmission of Specified Electronic Mail, and other applicable anti-spam regulations.</p>
-                </div>
-                <div class="japanese">
-                    <p>CountryMax Email Deliveryはスパムに対して厳格なゼロトレランスポリシーを維持しています。当社は2003年CAN-SPAM法、カナダの反スパム法（CASL）、EU一般データ保護規則（GDPR）、日本の特定電子メールの送信の適正化等に関する法律、その他の適用可能な反スパム規制を完全に遵守しています。</p>
-                </div>
-            </div>
-            
-            <h2>2. Definition of Spam</h2>
-            <div class="bilingual-section">
-                <div class="english">
-                    <p>For purposes of this policy, spam is defined as unsolicited commercial email sent in bulk. Key indicators of spam include:</p>
-                    <ul>
-                        <li>Recipients who have not provided explicit, verifiable consent to receive messages</li>
-                        <li>Deceptive subject lines, header information, or sender addresses</li>
-                        <li>Absence of a valid physical postal address</li>
-                        <li>Lack of a clear, functional unsubscribe mechanism</li>
-                        <li>Failure to honor opt-out requests within 10 business days</li>
-                    </ul>
-                </div>
-                <div class="japanese">
-                    <p>本ポリシーの目的上、スパムとは一括送信される未承諾の商業用電子メールと定義されます。スパムの主な指標には以下が含まれます：</p>
-                    <ul>
-                        <li>メッセージ受信について明示的かつ検証可能な同意を提供していない受信者</li>
-                        <li>欺瞞的な件名、ヘッダー情報、または送信者アドレス</li>
-                        <li>有効な物理的な郵送先住所の欠如</li>
-                        <li>明確で機能的な配信停止メカニズムの欠如</li>
-                        <li>10営業日以内に配信停止要求を処理しないこと</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <h2>3. Requirements for All Emails</h2>
-            <div class="bilingual-section">
-                <div class="english">
-                    <p>All emails sent through our Service must comply with the following requirements:</p>
-                    
-                    <h3>Consent Requirements</h3>
-                    <ul>
-                        <li><strong>Explicit Opt-In:</strong> All recipients must have provided explicit, documented consent to receive emails from you.</li>
-                        <li><strong>Double Opt-In:</strong> We strongly recommend using double opt-in (confirmation email) for all mailing lists.</li>
-                        <li><strong>Clear Identification:</strong> All emails must clearly identify the sender and organization.</li>
-                    </ul>
-                    
-                    <h3>Content Requirements</h3>
-                    <ul>
-                        <li><strong>Unsubscribe Mechanism:</strong> Every email must contain a visible, functional unsubscribe mechanism that processes requests within 10 business days.</li>
-                        <li><strong>Physical Address:</strong> All commercial emails must include a valid physical postal address.</li>
-                        <li><strong>Truthful Content:</strong> Subject lines must accurately reflect email content, and sender information must not be deceptive.</li>
-                        <li><strong>Clear Labeling:</strong> Commercial content must be clearly identified as such.</li>
-                    </ul>
-                </div>
-                <div class="japanese">
-                    <p>当社のサービスを通じて送信されるすべての電子メールは、以下の要件を遵守する必要があります：</p>
-                    
-                    <h3>同意要件</h3>
-                    <ul>
-                        <li><strong>明示的なオプトイン:</strong> すべての受信者は、あなたからの電子メールを受信するための明示的かつ文書化された同意を提供している必要があります。</li>
-                        <li><strong>ダブルオプトイン:</strong> すべてのメーリングリストでダブルオプトイン（確認メール）の使用を強く推奨します。</li>
-                        <li><strong>明確な識別情報:</strong> すべての電子メールは送信者と組織を明確に識別する必要があります。</li>
-                    </ul>
-                    
-                    <h3>コンテンツ要件</h3>
-                    <ul>
-                        <li><strong>配信停止メカニズム:</strong> すべての電子メールには、10営業日以内にリクエストを処理する、表示され機能する配信停止メカニズムが含まれている必要があります。</li>
-                        <li><strong>物理的住所:</strong> すべての商業用電子メールには有効な物理的な郵送先住所を含める必要があります。</li>
-                        <li><strong>真実の内容:</strong> 件名は電子メールの内容を正確に反映し、送信者情報は欺瞞的であってはなりません。</li>
-                        <li><strong>明確なラベリング:</strong> 商業コンテンツはその旨を明確に識別する必要があります。</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <h2>4. Prohibited Content</h2>
-            <div class="bilingual-section">
-                <div class="english">
-                    <p>You may not use our Service to send emails containing or promoting:</p>
-                    <ul>
-                        <li>Adult content or pornography</li>
-                        <li>Illegal goods, services, or activities</li>
-                        <li>Malicious software, phishing attempts, or fraudulent schemes</li>
-                        <li>Pyramid schemes or multi-level marketing with deceptive practices</li>
-                        <li>Content that infringes on intellectual property rights</li>
-                        <li>Hate speech, harassment, or discriminatory content</li>
-                    </ul>
-                </div>
-                <div class="japanese">
-                    <p>以下の内容を含むまたは宣伝する電子メールの送信に当社のサービスを使用することは禁止されています：</p>
-                    <ul>
-                        <li>成人向けコンテンツまたはポルノグラフィー</li>
-                        <li>違法な商品、サービス、または活動</li>
-                        <li>悪意のあるソフトウェア、フィッシング行為、または詐欺的な計画</li>
-                        <li>ネズミ講または欺瞞的な慣行を伴うマルチレベルマーケティング</li>
-                        <li>知的財産権を侵害するコンテンツ</li>
-                        <li>ヘイトスピーチ、嫌がらせ、または差別的なコンテンツ</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <h2>5. Monitoring and Enforcement</h2>
-            <div class="bilingual-section">
-                <div class="english">
-                    <p>We employ multiple systems to monitor compliance with this Anti-Spam Policy:</p>
-                    <ul>
-                        <li><strong>Automated Content Scanning:</strong> All outgoing emails are scanned for spam characteristics.</li>
-                        <li><strong>Complaint Rate Monitoring:</strong> Accounts must maintain a complaint rate below 0.1% (1 complaint per 1,000 emails sent).</li>
-                        <li><strong>Bounce Rate Monitoring:</strong> Accounts must maintain a bounce rate below 5%.</li>
-                        <li><strong>Manual Account Reviews:</strong> We conduct regular reviews of high-volume senders.</li>
-                        <li><strong>List Verification:</strong> We may require proof of consent for recipient lists.</li>
-                    </ul>
-                </div>
-                <div class="japanese">
-                    <p>本反スパムポリシーの遵守状況を監視するために、複数のシステムを採用しています：</p>
-                    <ul>
-                        <li><strong>自動コンテンツスキャン:</strong> 送信されるすべての電子メールはスパム特性についてスキャンされます。</li>
-                        <li><strong>苦情率モニタリング:</strong> アカウントは苦情率を0.1%未満（送信1000通あたり1件の苦情）に維持する必要があります。</li>
-                        <li><strong>バウンス率モニタリング:</strong> アカウントはバウンス率を5%未満に維持する必要があります。</li>
-                        <li><strong>手動アカウントレビュー:</strong> 高ボリューム送信者を定期的にレビューします。</li>
-                        <li><strong>リスト検証:</strong> 受信者リストの同意証明を要求する場合があります。</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <h2>6. Complaint Handling Process</h2>
-            <div class="bilingual-section">
-                <div class="english">
-                    <p>We take all spam complaints seriously:</p>
-                    <ul>
-                        <li><strong>Reporting:</strong> Suspected spam can be reported to abuse@countrymaxemail.com</li>
-                        <li><strong>Investigation:</strong> All reports are investigated within 48 business hours</li>
-                        <li><strong>Action:</strong> Accounts found in violation will be immediately suspended</li>
-                        <li><strong>Blacklisting:</strong> We maintain relationships with ISPs and blacklist services to report confirmed spammers</li>
-                    </ul>
-                </div>
-                <div class="japanese">
-                    <p>スパムに関する苦情はすべて真剣に取り扱います：</p>
-                    <ul>
-                        <li><strong>報告:</strong> スパムの疑いがある場合は abuse@countrymaxemail.com に報告できます</li>
-                        <li><strong>調査:</strong> すべての報告は48営業時間以内に調査されます</li>
-                        <li><strong>措置:</strong> 違反が確認されたアカウントは直ちに停止されます</li>
-                        <li><strong>ブラックリスト登録:</strong> 確認されたスパマーを報告するため、ISPやブラックリストサービスとの関係を維持しています</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <h2>7. Consequences of Violation</h2>
-            <div class="bilingual-section">
-                <div class="english">
-                    <p>Violations of this policy will result in:</p>
-                    <ul>
-                        <li><strong>Immediate Suspension:</strong> Accounts will be suspended without refund</li>
-                        <li><strong>Termination:</strong> Serious violations will result in permanent account termination</li>
-                        <li><strong>Fines:</strong> We reserve the right to impose fines of up to $500 per violation</li>
-                        <li><strong>Legal Action:</strong> Serious violations may be reported to appropriate authorities</li>
-                        <li><strong>Blacklisting:</strong> Violators may be added to industry blacklists</li>
-                    </ul>
-                </div>
-                <div class="japanese">
-                    <p>本ポリシーに違反した場合、以下の結果が生じます：</p>
-                    <ul>
-                        <li><strong>即時停止:</strong> アカウントは返金なしで停止されます</li>
-                        <li><strong>解約:</strong> 重大な違反はアカウントの永久停止につながります</li>
-                        <li><strong>罰金:</strong> 違反1件につき最大500ドルの罰金を課す権利を留保します</li>
-                        <li><strong>法的措置:</strong> 重大な違反は適切な当局に報告される可能性があります</li>
-                        <li><strong>ブラックリスト登録:</strong> 違反者は業界のブラックリストに追加される可能性があります</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <h2>8. Best Practices</h2>
-            <div class="bilingual-section">
-                <div class="english">
-                    <p>To maintain good sending reputation:</p>
-                    <ul>
-                        <li>Use confirmed opt-in (double opt-in) for all lists</li>
-                        <li>Regularly clean your email lists (remove inactive addresses)</li>
-                        <li>Segment your lists for targeted, relevant content</li>
-                        <li>Monitor your engagement metrics (open rates, click rates)</li>
-                        <li>Provide valuable content that recipients expect</li>
-                        <li>Honor unsubscribe requests promptly</li>
-                    </ul>
-                </div>
-                <div class="japanese">
-                    <p>良好な送信評価を維持するためには：</p>
-                    <ul>
-                        <li>すべてのリストで確認済みオプトイン（ダブルオプトイン）を使用する</li>
-                        <li>電子メールリストを定期的にクリーンアップする（非アクティブなアドレスを削除）</li>
-                        <li>ターゲットを絞った関連コンテンツのためにリストをセグメント化する</li>
-                        <li>エンゲージメント指標（開封率、クリック率）を監視する</li>
-                        <li>受信者が期待する価値のあるコンテンツを提供する</li>
-                        <li>配信停止要求を迅速に処理する</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="last-updated">
-                <p>Effective Date: June 4, 2025</p>
-            </div>
-            
-            <a href="index.html" class="back-to-home"><i class="fas fa-arrow-left"></i> Back to Home</a>
-        </div>
+  <header>
+    <div class="navbar">
+      <a href="index.html" class="logo">C-Tiger</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home / ホーム</a></li>
+          <li><a href="about.html">About Us / 私たちについて</a></li>
+          <li><a href="contact.html">Contact / お問い合わせ</a></li>
+          <li><a href="faq.html">FAQ / よくある質問</a></li>
+          <li><a href="terms.html">Terms of Service / 利用規約</a></li>
+          <li><a href="privacy.html">Privacy Policy / プライバシーポリシー</a></li>
+          <li><a href="anti-spam.html">Anti-Spam Policy / 迷惑メール対策ポリシー</a></li>
+          <li><a href="gdpr.html">GDPR Compliance / GDPR準拠ポリシー</a></li>
+          <li><a href="acceptable-use.html">Acceptable Use Policy / 適正使用ポリシー</a></li>
+        </ul>
+      </nav>
     </div>
+  </header>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>CountryMax Email</h3>
-                    <p>Professional email delivery service powered by Amazon SES infrastructure.</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Legal</h3>
-                    <ul>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="anti-spam.html">Anti-Spam Policy</a></li>
-                        <li><a href="#">Acceptable Use Policy</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact Us</h3>
-                    <ul>
-                        <li><i class="fas fa-envelope"></i> koltwnvtya@gmail.com</li>
-                        <li><i class="fas fa-phone"></i> +1 (516) 786-6647</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Corvallis, OR, USA</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 CountryMax Email Delivery Service. All rights reserved. A professional email solution powered by Amazon SES.</p>
-                <p>GitHub Pages URL: https://countrymaxemaildelivery1.github.io</p>
-            </div>
-        </div>
-    </footer>
+  <main>
+    <div class="content">
+      <!-- English content -->
+      <h1>Anti-Spam Policy</h1>
+      <ul>
+        <li>We have a zero-tolerance policy for spam. "Spam" means sending unsolicited bulk emails to people with whom you have no prior relationship or consent.</li>
+        <li>You may only use our service to send emails to recipients who have voluntarily signed up or explicitly agreed to receive emails from you.</li>
+        <li>Using our service to send emails to purchased lists or to addresses obtained without consent is strictly prohibited.</li>
+        <li>All marketing emails sent using our service must include a clear and functional unsubscribe mechanism, allowing recipients to opt out of future mailings.</li>
+        <li>Emails sent through our service must not contain false or misleading headers, subject lines, or sender information. You must accurately identify yourself or your organization in your email content.</li>
+        <li>If we detect spam activity or receive spam complaints regarding your emails, your account may be suspended or terminated immediately. We monitor bounce rates and complaint rates to enforce this policy.</li>
+        <li>We cooperate with law enforcement and may report or disclose information about spammers or any illegal email activity to the appropriate authorities.</li>
+        <li>Users of our service are responsible for complying with all applicable anti-spam laws (such as the U.S. CAN-SPAM Act and Japan's anti-spam regulations) when sending emails through C-Tiger.</li>
+      </ul>
+      
+      <hr />
+      
+      <!-- Japanese content -->
+      <h1 lang="ja">迷惑メール対策ポリシー</h1>
+      <ul lang="ja">
+        <li>当社は迷惑メールに対してゼロトレランス（無容認）の方針を採っています。「迷惑メール」とは、事前の関係や同意のない相手に対して一方的に送信される未承諾の大量メールを指します。</li>
+        <li>当社のサービスは、受信者が自発的に登録した、または受信に明示的に同意した相手に対してのみメールを送信する目的で利用できます。</li>
+        <li>購入したメールリストや受信者の同意なく入手したアドレスにメールを送信する行為は、厳格に禁止されています。</li>
+        <li>当社のサービスを使用して送信されるすべてのマーケティングメールには、受信者が将来のメール配信を停止できる明確で有効な配信停止（オプトアウト）手段を含めなければなりません。</li>
+        <li>偽装や誤解を招くヘッダー、件名、送信者情報を含むメールの送信は認められません。メールには送信者または組織を正確に識別できる情報を明記する必要があります。</li>
+        <li>当社がスパム行為を検知した場合、またはお客様の送信メールに関して迷惑メールの苦情を受け取った場合、お客様のアカウントは直ちに一時停止または終了されることがあります。当社はバウンス率や苦情率を監視し、本ポリシーの遵守を徹底します。</li>
+        <li>当社は法執行機関と協力しており、スパム行為や違法なメール活動に関与したユーザーに関する情報を適切な当局に報告または開示する場合があります。</li>
+        <li>お客様は、本サービスを利用してメールを送信するにあたり、米国のCAN-SPAM法や日本の迷惑メール規制など、適用されるすべての迷惑メール関連法令を遵守する責任を負います。</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 C-Tiger. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>

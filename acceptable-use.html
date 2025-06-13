@@ -1,502 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acceptable Use Policy - CountryMax Email Delivery</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* 使用与之前政策页面相同的样式 */
-        :root {
-            --primary: #2c3e50;
-            --secondary: #3498db;
-            --accent: #e74c3c;
-            --light: #ecf0f1;
-            --dark: #2c3e50;
-        }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
-        body {
-            background-color: #f8f9fa;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        
-        header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
-            color: white;
-            padding: 1rem 0;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.8rem;
-            font-weight: 700;
-        }
-        
-        .logo i {
-            color: var(--accent);
-        }
-        
-        nav ul {
-            display: flex;
-            list-style: none;
-            gap: 1.5rem;
-        }
-        
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            padding: 8px 12px;
-            border-radius: 4px;
-        }
-        
-        nav a:hover {
-            background: rgba(255, 255, 255, 0.1);
-        }
-        
-        .policy-container {
-            max-width: 1000px;
-            margin: 4rem auto;
-            padding: 2rem;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 25px rgba(0,0,0,0.1);
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-        }
-        
-        .policy-header {
-            text-align: center;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 2px solid #3498db;
-            grid-column: span 2;
-        }
-        
-        .policy-header h1 {
-            color: #2c3e50;
-            font-size: 2.5rem;
-        }
-        
-        .policy-header p {
-            color: #7f8c8d;
-            font-size: 1.1rem;
-        }
-        
-        .policy-content {
-            line-height: 1.8;
-        }
-        
-        .policy-content h2 {
-            color: #2c3e50;
-            margin: 2rem 0 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid #ecf0f1;
-            font-size: 1.5rem;
-        }
-        
-        .policy-content h3 {
-            color: #3498db;
-            margin: 1.5rem 0 0.8rem;
-        }
-        
-        .policy-content p {
-            margin-bottom: 1rem;
-            color: #34495e;
-        }
-        
-        .policy-content ul {
-            padding-left: 2rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .policy-content li {
-            margin-bottom: 0.8rem;
-        }
-        
-        .last-updated {
-            text-align: right;
-            font-style: italic;
-            color: #7f8c8d;
-            margin-top: 2rem;
-            padding-top: 1rem;
-            border-top: 1px solid #ecf0f1;
-            grid-column: span 2;
-        }
-        
-        .back-to-home {
-            display: inline-block;
-            margin-top: 2rem;
-            color: #3498db;
-            text-decoration: none;
-            font-weight: 600;
-            grid-column: span 2;
-        }
-        
-        .back-to-home i {
-            margin-right: 8px;
-        }
-        
-        .language-column {
-            padding: 0 15px;
-        }
-        
-        footer {
-            background: var(--dark);
-            color: white;
-            padding: 4rem 0 2rem;
-            grid-column: span 2;
-        }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-        
-        .footer-column h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        .footer-column h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background: var(--secondary);
-        }
-        
-        .footer-column ul {
-            list-style: none;
-        }
-        
-        .footer-column ul li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-column ul li a {
-            color: #ddd;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .footer-column ul li a:hover {
-            color: var(--secondary);
-            padding-left: 5px;
-        }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            font-size: 0.9rem;
-            color: #aaa;
-        }
-        
-        @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-                gap: 1rem;
-            }
-            
-            nav ul {
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            .policy-container {
-                padding: 1.5rem;
-                margin: 2rem auto;
-                grid-template-columns: 1fr;
-            }
-            
-            .policy-header h1 {
-                font-size: 2rem;
-            }
-            
-            .last-updated,
-            .back-to-home {
-                grid-column: span 1;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C-Tiger - Acceptable Use Policy (適正使用ポリシー)</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <div class="container header-container">
-            <div class="logo">
-                <i class="fas fa-paper-plane"></i>
-                <span>CountryMax Email Delivery</span>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="terms.html">Terms of Service</a></li>
-                    <li><a href="anti-spam.html">Anti-Spam Policy</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <div class="container policy-container">
-        <div class="policy-header">
-            <h1>Acceptable Use Policy / 利用ポリシー</h1>
-            <p>Last Updated: June 4, 2025 / 最終更新日: 2025年6月4日</p>
-        </div>
-        
-        <div class="language-column policy-content">
-            <!-- English Column -->
-            <h2>1. Introduction</h2>
-            <p>This Acceptable Use Policy ("AUP") governs your use of CountryMax Email Delivery services. By using our services, you agree to comply with this AUP. Violations may result in suspension or termination of your account.</p>
-            
-            <h2>2. Prohibited Content</h2>
-            <p>You may not use our services to send, or facilitate the sending of, any content that:</p>
-            <ul>
-                <li>Is illegal, harmful, or promotes illegal activities</li>
-                <li>Contains sexually explicit material or adult content</li>
-                <li>Promotes violence, hate speech, or discrimination</li>
-                <li>Infringes on intellectual property rights</li>
-                <li>Contains false or misleading information</li>
-                <li>Promotes illegal drugs, weapons, or regulated substances</li>
-                <li>Contains malware, viruses, or malicious code</li>
-            </ul>
-            
-            <h2>3. Prohibited Activities</h2>
-            <p>You may not use our services for:</p>
-            <ul>
-                <li>Sending unsolicited commercial email (spam)</li>
-                <li>Harvesting email addresses without consent</li>
-                <li>Phishing or fraudulent activities</li>
-                <li>Impersonating others or spoofing identities</li>
-                <li>Denial of service attacks</li>
-                <li>High-risk activities without our prior written consent</li>
-                <li>Violating CAN-SPAM, GDPR, CASL, or other email regulations</li>
-            </ul>
-            
-            <h2>4. Sending Requirements</h2>
-            <p>All emails sent through our service must:</p>
-            <ul>
-                <li>Comply with all applicable laws and regulations</li>
-                <li>Include a valid physical postal address</li>
-                <li>Contain a clear and functional unsubscribe mechanism</li>
-                <li>Accurately identify the sender in the "From" field</li>
-                <li>Have truthful and non-deceptive subject lines</li>
-                <li>Be sent to recipients who have provided explicit consent</li>
-            </ul>
-            
-            <h2>5. List Hygiene Requirements</h2>
-            <p>You must maintain clean and up-to-date email lists:</p>
-            <ul>
-                <li>Remove hard bounces immediately</li>
-                <li>Suppress unsubscribed addresses permanently</li>
-                <li>Remove inactive addresses (no engagement in 6 months)</li>
-                <li>Regularly validate email addresses</li>
-                <li>Maintain documentation of consent for all recipients</li>
-            </ul>
-            
-            <h2>6. Performance Thresholds</h2>
-            <p>To maintain good sending reputation, you must:</p>
-            <ul>
-                <li>Maintain complaint rates below 0.1% (1 complaint per 1,000 emails)</li>
-                <li>Maintain bounce rates below 5%</li>
-                <li>Maintain spam trap hits below 0.01%</li>
-                <li>Ensure unsubscribe rates below industry averages</li>
-            </ul>
-            <p>Accounts exceeding these thresholds may be suspended.</p>
-            
-            <h2>7. Security Requirements</h2>
-            <p>You must:</p>
-            <ul>
-                <li>Secure your account credentials</li>
-                <li>Use API keys and SMTP credentials securely</li>
-                <li>Implement DMARC, DKIM, and SPF for your sending domains</li>
-                <li>Promptly report any security incidents</li>
-                <li>Use TLS encryption for all email transmissions</li>
-            </ul>
-            
-            <h2>8. Monitoring and Enforcement</h2>
-            <p>We actively monitor all email traffic for compliance with this AUP:</p>
-            <ul>
-                <li>Automated systems scan content and headers</li>
-                <li>Manual reviews of high-volume senders</li>
-                <li>Reputation monitoring with major ISPs</li>
-                <li>Feedback loop monitoring with mailbox providers</li>
-            </ul>
-            <p>Violations will result in warnings, suspension, or termination.</p>
-            
-            <h2>9. Reporting Violations</h2>
-            <p>To report violations of this AUP, contact us at:</p>
-            <p>Email: abuse@countrymaxemail.com<br>
-            Phone: +1 (800) 555-ABUSE</p>
-            <p>We investigate all reports within 24 business hours.</p>
-            
-            <h2>10. Policy Updates</h2>
-            <p>We may update this AUP at any time. Continued use of our services constitutes acceptance of the updated policy.</p>
-        </div>
-        
-        <div class="language-column policy-content">
-            <!-- Japanese Column -->
-            <h2>1. はじめに</h2>
-            <p>本利用ポリシー（AUP）は、CountryMax Email Deliveryサービスの利用を規定します。当社のサービスを利用することで、お客様は本AUPに従うことに同意したものとみなされます。違反があった場合、アカウントが停止または終了される可能性があります。</p>
-            
-            <h2>2. 禁止コンテンツ</h2>
-            <p>以下の内容を含むメールの送信、または送信の促進に当社サービスを使用することは禁止されています：</p>
-            <ul>
-                <li>違法、有害、または違法活動を促進するもの</li>
-                <li>性的に露骨な素材やアダルトコンテンツを含むもの</li>
-                <li>暴力、ヘイトスピーチ、差別を促進するもの</li>
-                <li>知的財産権を侵害するもの</li>
-                <li>虚偽または誤解を招く情報を含むもの</li>
-                <li>違法薬物、武器、規制物質を促進するもの</li>
-                <li>マルウェア、ウイルス、悪意のあるコードを含むもの</li>
-            </ul>
-            
-            <h2>3. 禁止行為</h2>
-            <p>以下の目的での当社サービスの使用は禁止されています：</p>
-            <ul>
-                <li>迷惑メール（スパム）の送信</li>
-                <li>同意なしのメールアドレス収集</li>
-                <li>フィッシングや詐欺行為</li>
-                <li>他人のなりすましやID詐称</li>
-                <li>サービス拒否攻撃</li>
-                <li>事前書面同意なしのハイリスク活動</li>
-                <li>CAN-SPAM、GDPR、CASL、特定電子メール法などの規制違反</li>
-            </ul>
-            
-            <h2>4. 送信要件</h2>
-            <p>当社サービスを通じて送信されるすべてのメールは以下を満たす必要があります：</p>
-            <ul>
-                <li>適用されるすべての法令の遵守</li>
-                <li>有効な物理的な郵送先住所の記載</li>
-                <li>明確かつ機能的な配信停止メカニズムの実装</li>
-                <li>送信者情報の正確な記載</li>
-                <li>真実かつ誤解を招かない件名</li>
-                <li>明示的な同意を得た受信者への送信</li>
-            </ul>
-            
-            <h2>5. リスト管理要件</h2>
-            <p>クリーンで最新のメールリストを維持する必要があります：</p>
-            <ul>
-                <li>ハードバウンスは即時削除</li>
-                <li>配信停止アドレスの恒久的抑制</li>
-                <li>非アクティブアドレスの削除（6ヶ月間のエンゲージメントがない場合）</li>
-                <li>定期的なメールアドレスの検証</li>
-                <li>すべての受信者の同意証明の保持</li>
-            </ul>
-            
-            <h2>6. パフォーマンス基準</h2>
-            <p>良好な送信評価を維持するためには：</p>
-            <ul>
-                <li>苦情率0.1%未満の維持（送信1000通あたり1件）</li>
-                <li>バウンス率5%未満の維持</li>
-                <li>スパムトラップヒット率0.01%未満の維持</li>
-                <li>業界平均以下の配信停止率の確保</li>
-            </ul>
-            <p>これらの基準を超えたアカウントは停止される可能性があります。</p>
-            
-            <h2>7. セキュリティ要件</h2>
-            <p>以下の対策が必須です：</p>
-            <ul>
-                <li>アカウント認証情報の保護</li>
-                <li>APIキーとSMTP認証情報の安全な管理</li>
-                <li>送信ドメインへのDMARC、DKIM、SPFの実装</li>
-                <li>セキュリティインシデントの即時報告</li>
-                <li>すべてのメール送信におけるTLS暗号化の使用</li>
-            </ul>
-            
-            <h2>8. 監視と執行</h2>
-            <p>当社は本AUP遵守のためすべてのメールトラフィックを監視します：</p>
-            <ul>
-                <li>自動システムによるコンテンツとヘッダーのスキャン</li>
-                <li>高ボリューム送信者への手動レビュー</li>
-                <li>主要ISPとのレピュテーションモニタリング</li>
-                <li>メールボックスプロバイダーとのフィードバックループ監視</li>
-            </ul>
-            <p>違反には警告、停止、契約終了などの措置が取られます。</p>
-            
-            <h2>9. 違反の報告</h2>
-            <p>本AUP違反を報告する場合は以下までご連絡ください：</p>
-            <p>メール: abuse@countrymaxemail.com<br>
-            電話: +1 (800) 555-ABUSE</p>
-            <p>すべての報告を24営業時間以内に調査します。</p>
-            
-            <h2>10. ポリシーの更新</h2>
-            <p>当社は随時本AUPを更新する権利を有します。更新後もサービスを継続して利用される場合、更新されたポリシーに同意したものとみなされます。</p>
-        </div>
-        
-        <div class="last-updated">
-            <p>Effective Date: June 4, 2025 / 施行日: 2025年6月4日</p>
-        </div>
-        
-        <a href="index.html" class="back-to-home"><i class="fas fa-arrow-left"></i> Back to Home / ホームに戻る</a>
+  <header>
+    <div class="navbar">
+      <a href="index.html" class="logo">C-Tiger</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home / ホーム</a></li>
+          <li><a href="about.html">About Us / 私たちについて</a></li>
+          <li><a href="contact.html">Contact / お問い合わせ</a></li>
+          <li><a href="faq.html">FAQ / よくある質問</a></li>
+          <li><a href="terms.html">Terms of Service / 利用規約</a></li>
+          <li><a href="privacy.html">Privacy Policy / プライバシーポリシー</a></li>
+          <li><a href="anti-spam.html">Anti-Spam Policy / 迷惑メール対策ポリシー</a></li>
+          <li><a href="gdpr.html">GDPR Compliance / GDPR準拠ポリシー</a></li>
+          <li><a href="acceptable-use.html">Acceptable Use Policy / 適正使用ポリシー</a></li>
+        </ul>
+      </nav>
     </div>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>CountryMax Email</h3>
-                    <p>Professional email delivery service powered by Amazon SES infrastructure.</p>
-                </div>
-                <div class="footer-column">
-                    <h3>Legal / 法務</h3>
-                    <ul>
-                        <li><a href="terms.html">Terms of Service / 利用規約</a></li>
-                        <li><a href="acceptable-use.html">Acceptable Use Policy / 利用ポリシー</a></li>
-                        <li><a href="privacy.html">Privacy Policy / プライバシーポリシー</a></li>
-                        <li><a href="anti-spam.html">Anti-Spam Policy / スパム防止ポリシー</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h3>Contact Us / お問い合わせ</h3>
-                    <ul>
-                        <li><i class="fas fa-envelope"></i> koltwnvtya@gmail.com</li>
-                        <li><i class="fas fa-phone"></i> +1 (516) 786-6647</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Corvallis, OR,USA</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 CountryMax Email Delivery Service. All rights reserved. A professional email solution powered by Amazon SES.</p>
-                <p>GitHub Pages URL: https://countrymaxemaildelivery1.github.io</p>
-            </div>
-        </div>
-    </footer>
+  </header>
+  
+  <main>
+    <div class="content">
+      <!-- English content -->
+      <h1>Acceptable Use Policy</h1>
+      <ul>
+        <li>Do not use the C-Tiger service for any unlawful, harmful, or fraudulent activities.</li>
+        <li>Do not send unsolicited bulk emails or spam using our service (please refer to our <a href="anti-spam.html">Anti-Spam Policy</a> for details).</li>
+        <li>Do not transmit viruses, malware, or any other malicious code through our service.</li>
+        <li>Do not upload or send content that is defamatory, obscene, harassing, or otherwise objectionable, or that infringes upon any third party’s rights (including intellectual property rights).</li>
+        <li>Do not impersonate any person or organization, or misrepresent your affiliation with any person or organization while using our service.</li>
+        <li>Do not attempt to probe, scan, or test the vulnerability of our service’s systems or networks, and do not breach or circumvent any security or authentication measures.</li>
+        <li>Do not interfere with or disrupt the service or its networks (for example, by imposing an unreasonable load, flooding, spamming, or mail-bombing).</li>
+        <li>Do not abuse the service in a manner that is inconsistent with its intended use or with documentation provided by C-Tiger.</li>
+        <li>Violation of this Acceptable Use Policy may result in suspension or termination of your account or other remedial action at our discretion.</li>
+      </ul>
+      
+      <hr />
+      
+      <!-- Japanese content -->
+      <h1 lang="ja">適正使用ポリシー</h1>
+      <ul lang="ja">
+        <li>本サービスを違法、有害、または詐欺的な行為に利用しないでください。</li>
+        <li>未承諾の一斉メールやスパムを送信しないでください（詳細については<a href="anti-spam.html">迷惑メール対策ポリシー</a>をご参照ください）。</li>
+        <li>ウイルス、マルウェア、またはその他の悪意のあるコードを送信しないでください。</li>
+        <li>名誉毀損的、猥褻的、嫌がらせ的な内容、または第三者の権利（知的財産権等）を侵害する不適切なコンテンツをアップロードまたは送信しないでください。</li>
+        <li>他人や他組織になりすましたり、自身の所属を偽ったりしないでください。</li>
+        <li>本サービスのシステムやネットワークの脆弱性を調査、スキャン、テストすることや、セキュリティや認証対策を回避する行為は行わないでください。</li>
+        <li>本サービスやそのサーバー・ネットワークを妨害または混乱させる行為をしないでください（例：過度な負荷のかけ込み、フラッディング、スパム送信、メール爆弾など）。</li>
+        <li>本サービスの意図された目的や当社の提供するドキュメントに反する方法でサービスを乱用しないでください。</li>
+        <li>本ポリシーに違反した場合、当社の裁量によりアカウントの一時停止や終了などの措置が取られることがあります。</li>
+      </ul>
+    </div>
+  </main>
+  
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 C-Tiger. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
